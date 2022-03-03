@@ -14,6 +14,10 @@
 		423EF6E627D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EF6E527D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppTests.swift */; };
 		423EF6F027D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EF6EF27D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITests.swift */; };
 		423EF6F227D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EF6F127D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITestsLaunchTests.swift */; };
+		423EF6FF27D0EABE0055CF34 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EF6FE27D0EABE0055CF34 /* StackView.swift */; };
+		423EF70127D0EB1B0055CF34 /* QueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EF70027D0EB1B0055CF34 /* QueueView.swift */; };
+		423EF70327D0EB330055CF34 /* LinkedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EF70227D0EB330055CF34 /* LinkedListView.swift */; };
+		423EF70727D0ED860055CF34 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EF70627D0ED860055CF34 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		423EF6EB27D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisualisingDataStructuresIOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423EF6EF27D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualisingDataStructuresIOSAppUITests.swift; sourceTree = "<group>"; };
 		423EF6F127D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualisingDataStructuresIOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		423EF6FE27D0EABE0055CF34 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		423EF70027D0EB1B0055CF34 /* QueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueView.swift; sourceTree = "<group>"; };
+		423EF70227D0EB330055CF34 /* LinkedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListView.swift; sourceTree = "<group>"; };
+		423EF70627D0ED860055CF34 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				423EF6D427D0EA7A0055CF34 /* VisualisingDataStructuresIOSAppApp.swift */,
-				423EF6D627D0EA7A0055CF34 /* ContentView.swift */,
+				423EF70527D0ED750055CF34 /* logic */,
+				423EF70427D0ED660055CF34 /* Views */,
 				423EF6D827D0EA7C0055CF34 /* Assets.xcassets */,
 				423EF6DA27D0EA7C0055CF34 /* Preview Content */,
 			);
@@ -125,6 +134,25 @@
 				423EF6F127D0EA7C0055CF34 /* VisualisingDataStructuresIOSAppUITestsLaunchTests.swift */,
 			);
 			path = VisualisingDataStructuresIOSAppUITests;
+			sourceTree = "<group>";
+		};
+		423EF70427D0ED660055CF34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				423EF70227D0EB330055CF34 /* LinkedListView.swift */,
+				423EF70027D0EB1B0055CF34 /* QueueView.swift */,
+				423EF6FE27D0EABE0055CF34 /* StackView.swift */,
+				423EF6D627D0EA7A0055CF34 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		423EF70527D0ED750055CF34 /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				423EF70627D0ED860055CF34 /* Stack.swift */,
+			);
+			path = logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +287,10 @@
 			files = (
 				423EF6D727D0EA7A0055CF34 /* ContentView.swift in Sources */,
 				423EF6D527D0EA7A0055CF34 /* VisualisingDataStructuresIOSAppApp.swift in Sources */,
+				423EF70127D0EB1B0055CF34 /* QueueView.swift in Sources */,
+				423EF6FF27D0EABE0055CF34 /* StackView.swift in Sources */,
+				423EF70727D0ED860055CF34 /* Stack.swift in Sources */,
+				423EF70327D0EB330055CF34 /* LinkedListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
