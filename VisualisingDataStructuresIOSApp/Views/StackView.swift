@@ -8,8 +8,36 @@
 import SwiftUI
 
 struct StackView: View {
+    @StateObject var stack = Stack()
+    @State var showPeekText : Bool = false
     var body: some View {
-        Text("this is how stack works")
+            NavigationView {
+                VStack{
+                    List {
+                        ForEach(stack.items, id : \.self) { number in
+                            Text("\(number)")
+                        }
+                        .navigationBarItems(
+                            leading:
+                                Button("Delete", action: {
+                                    //stack.pop()
+                                }),
+                            trailing:
+                                Button("Add", action: {
+                                stack.push()
+                                })
+                        )
+
+                    }
+                
+                    Button("Peek", action: {
+                        showPeekText = true
+                    }).padding()
+                    if showPeekText == true {
+                        Text(stack.peek())
+                    }
+                }
+            }
     }
 }
 

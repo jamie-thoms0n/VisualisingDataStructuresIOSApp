@@ -4,57 +4,54 @@
 //
 //  Created by Thomson, Jamie (NA) on 03/03/2022.
 //
-
+//
 import Foundation
 
-class Stack {
+class Stack : ObservableObject {
 
+    @Published var items : [Int]
+    var pointer : Int
+    
+    init() {
+        self.items = [1,2,3,4,5]
+        self.pointer = 4
+    }
+    
 
-    func peek(items : [Int], pointer : Int) -> String {
+    
+
+    func peek() -> String {
+        let count = items.count - 1
         if items.count == 0 {
-          return("Empty")
+          return("Stack is empty")
         }
         else{
-          return("Top of stack \(items[-1])")
+            return("\(items[count]) is at the top of the stack")
         }
     }
 
-    func push(items : [Int], pointer : Int) {
-      var input = input
-        if pointer == 0{
-        items.append(input)
-        pointer += 1
-    }
-    if pointer != 0{
-        items[pointer + 1].append(input)
-        pointer += 1
+    func push() -> [Int] {
+        let input = Int.random(in: 0..<300)
+        if pointer == 0 {
+            items.append(input)
+            pointer += 1
         }
+        if pointer != 0 {
+            items.append(input)
+            pointer += 1
+            }
       return(items)
     }
 
 
 
-//    func pop(items : [Int], pointer : Int){
-//      if stack == []:
-//        print("null")
-//      else:
-//        stack.pop(pointer)
-//        pointer -= 1
-//      print(stack)
-//    }
-//
-//    this = True
-//
-//    while this == True:
-//      print('''1 - view stack\n2 - push onto stack\n3 - remove from stack\n4 - quit''')
-//      menuChoice = input('Enter the menu choice: ')
-//      if menuChoice == '1':
-//        peek(stack,pointer)
-//      elif menuChoice == '2':
-//        push(stack,pointer)
-//      elif menuChoice == '3':
-//        pop(stack,pointer)
-//      else:
-//        this = False
+    func pop(){
+      if items == []:
+        print("null")
+      else:
+        stack.pop(pointer)
+        pointer -= 1
+      print(stack)
+    }
 
 }
