@@ -1,14 +1,14 @@
 //
-//  Stack.swift
+//  Queue.swift
 //  VisualisingDataStructuresIOSApp
 //
-//  Created by Thomson, Jamie (NA) on 03/03/2022.
+//  Created by Thomson, Jamie (NA) on 24/03/2022.
 //
-//
+
 import Foundation
 
-class Stack : ObservableObject {
-
+class Queue : ObservableObject {
+    
     @Published var items : [Int]
     var pointer : Int
     
@@ -50,7 +50,7 @@ class Stack : ObservableObject {
             return []
         }
         else {
-            items.remove(at: pointer)
+            items.remove(at: 0)
             pointer -= 1
             return items
         }

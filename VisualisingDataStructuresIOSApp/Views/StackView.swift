@@ -12,15 +12,17 @@ struct StackView: View {
     @State var showPeekText : Bool = false
     var body: some View {
             NavigationView {
+                Spacer()
                 VStack{
+                    Text("This is your stack:")
                     List {
-                        ForEach(stack.items, id : \.self) { number in
+                        ForEach(stack.items.reversed(), id : \.self) { number in
                             Text("\(number)")
                         }
                         .navigationBarItems(
                             leading:
                                 Button("Delete", action: {
-                                    //stack.pop()
+                                stack.pop()
                                 }),
                             trailing:
                                 Button("Add", action: {
